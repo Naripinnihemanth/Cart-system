@@ -56,6 +56,7 @@
   padding: 10px;
   border-radius: 20px;
   width: clamp(100px, 15vw, 200px);
+  cursor: pointer;
 }
 .product-details-stock {
   font-size: clamp(0.7rem, 2vw, 1rem);

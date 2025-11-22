@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 function AboutProduct() {
   const [urlPeramiters, setUrlPeramiters] = useSearchParams();
   const [ratingColor, setRatingColor] = useState("");
-  const { AddToCart } = useContext(CartData);
+  const { addToCart } = useContext(CartData);
   useEffect(() => {
     if (parseInt(urlPeramiters.get("rating")) > 3) {
       setRatingColor("green");
@@ -58,7 +58,29 @@ function AboutProduct() {
         <p className="product-details-stock">
           Available stock : {urlPeramiters.get("stock")}
         </p>
-        <button className="product-details-add-to-cart">Add To Cart</button>
+        <button
+          className="product-details-add-to-cart"
+          onClick={() => {
+            addToCart({
+              id: parseInt(urlPeramiters.get("id")),
+              sku: "HOM-0001",
+              title: urlPeramiters.get("title"),
+              description: urlPeramiters.get("description"),
+              price: parseInt(urlPeramiters.get("price")),
+              currency: "INR",
+              category: urlPeramiters.get("category"),
+              brand: "AromaCraft",
+              image: "https://picsum.photos/seed/product1/600/600",
+              rating: {
+                rate: parseInt(urlPeramiters.get("rating")),
+                count: parseInt(urlPeramiters.get("ratingCount")),
+              },
+              stock: parseInt(urlPeramiters.get("stock")),
+            });
+          }}
+        >
+          Add To Cart
+        </button>
       </motion.div>
     </div>
   );
