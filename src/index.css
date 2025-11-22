@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Hind+Madurai:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --body: #f1e3e4;
+  --primary-color: #1c1d21;
+  --secondery-color: #c0b0b0;
+  --shadows: #a288a6;
+  --primary-font: "Roboto+Condensed";
+  --secondary-font: "Hind+Madurai";
+  --normal-text: "Chivo";
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.home {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0.5% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+body {
+  background: var(--body);
+}
+
+.cart {
+  width: 100vw;
+  min-height: 50vh;
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details-page {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 35%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "PD SP";
+  justify-items: center;
+  align-items: start;
+  justify-content: center;
+}
+@media screen and (max-width: 950px) {
+  .details-page {
+    grid-template-columns: 1fr 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .details-page {
+    grid-template-columns: 1fr 45%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .home {
+    padding: 3% 5%;
+  }
+  .details-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "PD"
+      "SP";
+  }
+}

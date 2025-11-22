@@ -1,0 +1,110 @@
+.cart-item-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.cart-container {
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: 30px 1fr 100px 100px;
+  align-items: center;
+  justify-content: center;
+  justify-items: start;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+}
+.cart-item-title {
+  font-family: var(--normal-text);
+  font-size: clamp(0.7rem, 2vw, 1rem);
+}
+.cart-item-price {
+  font-family: var(--normal-text);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  font-weight: bold;
+  color: green;
+}
+
+.cart-item-price span {
+  font-size: clamp(0.5rem, 2vw, 0.7rem);
+  opacity: 0.8;
+}
+
+.cart-item-remove {
+  font-size: clamp(0.5rem, 2vw, 0.7rem);
+  width: clamp(40px, 11vw, 100px);
+  height: 25px;
+  border-radius: 10px;
+  border: 0.5px solid;
+  background: var(--secondery-color);
+}
+.cart-price-container {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--normal-text);
+}
+.item-price {
+  border-bottom: 1px dotted;
+  width: 70%;
+  min-height: 30px;
+  display: grid;
+  grid-template-columns: 20px 1fr 100px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--normal-text);
+  padding: 10px;
+}
+.price {
+  text-align: end;
+  border-left: 1px solid var(--primary-color);
+}
+.total {
+  border-top: 1px solid;
+  width: 70%;
+  min-height: 30px;
+  display: grid;
+  grid-template-columns: 20px 1fr 100px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "i t a";
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.text {
+  grid-area: t;
+  text-align: end;
+  padding: 0% 10%;
+}
+.total-amount {
+  grid-area: a;
+  text-align: end;
+  border-left: 1px solid var(--primary-color);
+}
+.order-btn {
+  width: 100px;
+  min-height: 30px;
+  background: var(--secondery-color);
+  padding: 5px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 650px) {
+  .cart-container {
+    grid-template-columns: 30px 1fr auto auto;
+  }
+  .total {
+    grid-template-columns: 20px 1fr 90px;
+    width: 100%;
+  }
+  .item-price {
+    grid-template-columns: 20px 1fr 50px;
+    width: 100%;
+  }
+}
