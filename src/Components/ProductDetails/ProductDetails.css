@@ -10,7 +10,6 @@
   font-family: var(--normal-text);
   gap: 10px;
   position: relative;
-  overflow: hidden;
 }
 .product-details-image {
   width: 100%;
@@ -167,6 +166,7 @@
   }
   .product-suggetion-container {
     height: auto;
+    overflow: hidden;
   }
   .adding-alert {
     position: fixed;

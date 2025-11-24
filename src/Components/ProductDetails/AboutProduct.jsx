@@ -50,8 +50,8 @@ function AboutProduct() {
         <span>{urlPeramiters.get("currency")}</span>
       </p>
       <motion.div
-        initial={{ transform: "translateY(40px)", opacity: 0 }}
-        whileInView={{ transform: "translateY(0px)", opacity: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
         className="product-details-footer"
       >
@@ -70,7 +70,7 @@ function AboutProduct() {
               currency: "INR",
               category: urlPeramiters.get("category"),
               brand: "AromaCraft",
-              image: "https://picsum.photos/seed/product1/600/600",
+              image: urlPeramiters.get("image"),
               rating: {
                 rate: parseInt(urlPeramiters.get("rating")),
                 count: parseInt(urlPeramiters.get("ratingCount")),

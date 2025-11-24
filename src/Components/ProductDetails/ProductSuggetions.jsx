@@ -43,7 +43,7 @@ function ProductSuggetions() {
 
       {suggestedProducts.map((item) => (
         <motion.div
-          initial={{ transform: "translateX(100px)", opacity: 0 }}
+          initial={{ transform: "translateX(90px)", opacity: 0 }}
           whileInView={{ transform: "translateX(0px)", opacity: 1 }}
           key={item.id}
           className="suggested-item"
